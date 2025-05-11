@@ -4,3 +4,21 @@ contact_links:
   - name: 아이디어 토론·Q&A는 여기로
     url: https://github.com/talkpick/talkpick-batch/discussions
     about: 아이디어 토론·Q&A는 Discussions 탭을 이용해 주세요.
+
+issue_templates:
+  - name: "✨ Epic"
+    description: 큰 기능(에픽) 카드 – 하위 사용자 스토리를 모으는 부모 이슈
+    labels: ["epic"]
+    file: epic.yml
+  - name: "✨ Feature"
+    description: 새로운 기능 추가
+    labels: ["feature"]
+    file: feature.yml
+  - name: "🛠️ Tech Debt / Refactor"
+    description:  리팩터링·성능 개선·보안 패치 등 기술 부채 상환 이슈
+    labels: ["tech-debt"]
+    file: tech-debt.yml
+  - name: "✏️ 간단 수정, 배포 수정 등 Chore 유형"
+    description: Chore 브런치 유형의 이슈들입니다.
+    labels: ["chore"]
+    file: chore.yml
