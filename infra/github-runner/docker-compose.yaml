@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  github-runner:
+    image: myoung34/github-runner:2.324.0
+    container_name: talkpick-github-runner
+    environment:
+      REPO_URL: ${REPO_URL}
+      RUNNER_NAME: ${RUNNER_NAME}
+      RUNNER_TOKEN: ${RUNNER_TOKEN}
+      RUNNER_WORKDIR: /tmp/runner
+      LABELS: ${LABELS}
+      RUNNER_REUSE: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ../docker-compose:/deploy
+    networks:
+      - deploy_talkpick
+      
+networks:
+  deploy_talkpick:
+    external: true
