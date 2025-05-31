@@ -124,7 +124,6 @@ services:
       - "${NGINX_HOST_PORT}:${NGINX_DOCKER_PORT}"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/.htpasswd:/etc/nginx/.htpasswd
       - ./nginx/logs:/var/log/nginx
     restart: on-failure:3
     networks:
